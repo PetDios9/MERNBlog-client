@@ -69,12 +69,23 @@ export default function RegisterPage(){
         },
         validate,
         onSubmit : async values => {
-            const user = values
-            const response = await axios.post('https://rocky-chamber-55659.herokuapp.com/users/register', user)
-            if (response.data.error) {
-                setErrorMessages(response.data.error)
-            } else{
-                history.push('/login')
+            const user = {
+                email: values.email,
+                username: values.username,
+                password: values.password
+            }
+            console.log(user)
+            try {
+                const response = await axios.post('https://rocky-chamber-55659.herokuapp.com/users/register', user)
+                if (response.data.error) {
+                    setErrorMessages(response.data.error)
+                } else{
+                    history.push('/login')
+                }
+            } 
+            
+            catch (err) {
+                console.log(err)
             }
         }
     })

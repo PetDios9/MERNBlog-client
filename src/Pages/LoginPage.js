@@ -56,7 +56,7 @@ export default function LoginPage() {
                 >
                     <Grid item xs={12}>
                         <Typography variant="h4">
-                            Login!
+                            Login to Start Posting!
                         </Typography>
                     </Grid>
                     {errorMessage ? <Typography className={classes.errorText} variant="subtitle1">{errorMessage}</Typography>: null}

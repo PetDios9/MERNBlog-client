@@ -22,7 +22,7 @@ export default function Homepage() {
 
     const getBlogs = async () => {
         setLoading(true)
-        await axios.get('http://localhost:8000/blogs/')
+        await axios.get('https://rocky-chamber-55659.herokuapp.com/blogs/')
             .then(response => setBlogs(response.data))
             .catch(err => console.log(err))
             setLoading(false)

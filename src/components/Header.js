@@ -30,7 +30,7 @@ export default function Header() {
 
     const logoutUser = async () => {
         try {
-            await axios.get('http://localhost:8000/users/logout', {withCredentials: true})
+            await axios.get('https://rocky-chamber-55659.herokuapp.com/users/logout', {withCredentials: true})
         } catch(err) {
             console.log(err)
         }

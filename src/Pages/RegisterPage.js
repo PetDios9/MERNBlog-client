@@ -70,7 +70,7 @@ export default function RegisterPage(){
         validate,
         onSubmit : async values => {
             const user = values
-            const response = await axios.post('http://localhost:8000/users/register', user)
+            const response = await axios.post('https://rocky-chamber-55659.herokuapp.com/users/register', user)
             if (response.data.error) {
                 setErrorMessages(response.data.error)
             } else{

@@ -34,7 +34,7 @@ export default function BlogDetails() {
 
     const getBlog = async () => {
         setLoading(true)
-        await axios.get(`http://localhost:8000/blogs/${id}`)
+        await axios.get(`https://rocky-chamber-55659.herokuapp.com/blogs/${id}`)
             .then(response=> setBlog(response.data))
             .catch(err=> console.log(err))
         setLoading(false)
@@ -52,7 +52,7 @@ export default function BlogDetails() {
 
     const handleDelete = async () => {
         setDeleteLoading(true)
-        await axios.delete(`http://localhost:8000/blogs/${id}`) 
+        await axios.delete(`https://rocky-chamber-55659.herokuapp.com/blogs/${id}`) 
             .then(()=> {history.push('/')}) 
             .catch(err => (err))
         setDeleteLoading(false)

@@ -54,7 +54,7 @@ export default function CreateBlog() {
         setLoading(true)
         const now = new Date()
 
-        await axios.post('http://localhost:8000/blogs',{
+        await axios.post('https://rocky-chamber-55659.herokuapp.com/blogs',{
             title,
             snippet,
             body,

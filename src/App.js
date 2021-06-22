@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get('http://localhost:8000/users/authenticateduser', {withCredentials: true})
+      const response = await axios.get('https://rocky-chamber-55659.herokuapp.com/users/authenticateduser', {withCredentials: true})
       if (response.data.isAuthenticated === true) {
         setUser(response.data.user)
       } else {
